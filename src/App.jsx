@@ -4,41 +4,47 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
- 
 
-  return (
-    <>
-       <div className="App">
-            <header>
-                <div className="logo">LOGO</div>
-                <nav>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Students</a></li>
-                        <li><a href="#">Projects</a></li>
-                    </ul>
-                    <ul>
-                    <button>LogIn</button>
-                    <button>Sign</button>
-                    </ul>
-              
-                </nav>
-            </header>
-            <main>
-                <section className="hero">
-                    <div className="hero-content">
-                        <h1>OUR <br /> CLASSROOM</h1>
-                        <button className="get-started">Get started</button>
+
+    return (
+        <>
+            <div className="App">
+                <header>
+                    <div className="logo"> <img src="/src/assets/logo.png" alt="konoha logo" /> </div>
+                    <nav>
+                        <ul>
+                            <li><a href="#" class='active'>Home</a></li>
+                            <li><a href="#">Students</a></li>
+                            <li><a href="#">Projects</a></li>
+                        </ul>
+                        <ul className='btn'>
+                            <button>LogIn</button>
+                            <button>Sign</button>
+                        </ul>
+                    </nav>
+                    <div id="header-text">
+                        <h1 className='welcome'>Welcome</h1>
+                        <h4 className='to'>to</h4>
+                        <h1 className="konoha">KONOHA</h1>
                     </div>
-                    <div className="hero-image">
-                        {/* <img src="path_to_your_image" alt="Online Education" /> */}
+                    <div id="hedbtn">
+                    <button className="get-started">Enroll Now!</button>
                     </div>
-                </section>
-            </main>
-        </div>
-    
-    </>
-  )
+                </header>
+                <main>
+                    <section className="hero">
+                        {/* <div className="hero-content">
+                            <h1>OUR <br /> CLASSROOM</h1>
+                            */}
+                        {/* <div className="hero-image">
+                        <img src="" alt="KonohaHomePage" />
+                    </div> */}
+                    </section>
+                </main>
+            </div>
+
+        </>
+    )
 }
 
 export default App
