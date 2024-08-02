@@ -1,3 +1,7 @@
+body{
+  cursor: url('./assets/cursor/cursor.png'), auto;
+}
+
 /* Welcome Font */
 @font-face {
     font-family: 'Lilita One';
