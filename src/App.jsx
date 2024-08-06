@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import AttendanceForm from './Components/AttendanceForm'
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
                     <nav>
                         <ul>
                             <li><a href="#" class='active'>Home</a></li>
+                            <li><a href="#">Notification</a></li>
                             <li><a href="#">Students</a></li>
                             <li><a href="#">Projects</a></li>
                         </ul>
@@ -43,10 +45,15 @@ function App() {
                             <span aria-hidden="true">O</span>
                             <span aria-hidden="true">H</span>
                             <span aria-hidden="true">A</span>
+                            <span aria-hidden="true">C</span>
+                            <span aria-hidden="true">L</span>
+                            <span aria-hidden="true">A</span>
+                            <span aria-hidden="true">S</span>
+                            <span aria-hidden="true">S</span>
                         </h1>
                     </div>
                     <div id="hedbtn">
-                    <button className="get-started">Enroll Now!</button>
+                    <div><AttendanceForm /></div> 
                     </div>
                 </header>
                 <main>
