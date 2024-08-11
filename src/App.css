@@ -1,28 +1,125 @@
-body{
+body {
   cursor: url('./assets/cursor/cursor.png'), auto;
 }
 
 /* Welcome Font */
 @font-face {
-    font-family: 'Lilita One';
-    src: url('./assets/fonts/LilitaOne-Regular.ttf') format('truetype');    
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  /* to font */
+  font-family: 'Lilita One';
+  src: url('./assets/fonts/LilitaOne-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* to font */
 @font-face {
-    font-family: 'Dr Sugiyama';
-    src: url('./assets/fonts/DrSugiyama-Regular.ttf') format('truetype');    
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  /* Konoha font */
+  font-family: 'Dr Sugiyama';
+  src: url('./assets/fonts/DrSugiyama-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Konoha font */
 @font-face {
-    font-family: 'Passion One';
-    src: url('./assets/fonts/PassionOne-Regular.ttf') format('truetype');    
-    font-weight: 400;
-    font-style: normal;
-  }
-  
+  font-family: 'Passion One';
+  src: url('./assets/fonts/PassionOne-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* NOTIFICATION SLIDE BAR */
+.notification {
+  background: linear-gradient(to bottom, #224d77, #4a7e90, #5facc2);
+}
+
+.notification-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  text-align: center;
+  padding: 10px 0;
+
+}
+
+.notification h1 {
+  display: flex;
+  color: #fff;
+  margin-left: 14px;
+  text-shadow: 1px 1px 2px black;
+  padding-top: 5px;
+  letter-spacing: 2px
+}
+
+/* Cards */
+
+.card {
+  min-width: 300px;
+  max-width: 400px;
+  margin: 0 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #fff;
+  opacity: 0.3;
+  transform: scale(0.9);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  z-index: 1;
+  position: relative;
+  cursor: pointer;
+}
+
+.card.active,
+.card:hover {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
+}
+
+
+/* Footer */
+.footer {
+  background-color: #203e5c;
+  color: #fff;
+  padding: 7px 0;
+  padding-bottom: 38px;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-content p {
+  margin: 0;
+}
+
+.footer-content nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+}
+
+.footer-content nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.footer-content nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-content nav ul li a:hover {
+  color: #ddd;
+}

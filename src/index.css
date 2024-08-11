@@ -7,6 +7,7 @@
 }
 
 body {
+  
   cursor: url('./assets/cursor/cursor\ .svg'), auto;
   font-family: "Passion One", sans-serif;
   background-color: #f0f4f8;
@@ -47,11 +48,15 @@ nav ul li {
   font-size: 26px;
 }
 
-nav ul li a {
+nav ul li a, Link {
   text-decoration: none;
   text-shadow: 1px 1px 2px black;
   color: #f1f0eefc;
   font-weight: bold;
+}
+
+nav ul li a:hover, Link:hover{
+  color: #fdfd25;
 }
 
 nav ul li a.active {
@@ -219,7 +224,7 @@ nav ul li a.active {
   padding: 10px 20px;
   font-size: 18px;
   color: #fff;
-  background-color: #007bff;
+  background-color: #21405f;
   border: 2px solid #fff;
   border-radius: 1rem;
   cursor: pointer;
@@ -245,46 +250,22 @@ nav ul li a.active {
   outline-color: currentColor;
   background-image:
     linear-gradient(transparent var(--fill),
-      #fff var(--fill));
+      #b9e4f1 var(--fill));
   transition-delay: 0s;
 }
 
-.attendance-form{
+.attendance-form {
   left: 7%;
 }
-.attendance-form input{
+
+.attendance-form input {
   border-radius: 6px;
   border: 1px solid white;
   left: 1;
   margin: 5px;
 }
-.attendance-btn{
+
+.attendance-btn {
   left: 104%;
   bottom: 0;
-}
-
-/*  */
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 50px;
-  background-color: #e0f7fa;
-}
-
-.hero-content {
-  max-width: 50%;
-}
-
-.hero-content h1 {
-  font-size: 48px;
-  line-height: 1.2;
-  margin-bottom: 20px;
-}
-
-
-
-.hero-image img {
-  max-width: 100%;
-  height: auto;
 }
