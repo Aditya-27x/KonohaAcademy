@@ -38,7 +38,7 @@ body {
   align-items: center;
   overflow: hidden;
   text-align: center;
-  padding: 10px 0;
+  padding: 42px 0;
 
 }
 
@@ -81,6 +81,24 @@ body {
   border-radius: 8px 8px 0 0;
 }
 
+/* Students */
+
+#student {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-around; 
+  background: linear-gradient(to bottom, #5facc2, #4a7e90, #224d77);
+  padding: 20px; 
+}
+
+#student h1 {
+  display: flex;
+  color: #fff;
+  margin-left: 14px;
+  text-shadow: 1px 1px 2px black;
+  padding-top: 5px;
+  letter-spacing: 2px
+}
 
 /* Footer */
 .footer {
