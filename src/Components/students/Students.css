@@ -119,7 +119,7 @@
     background: #222;
     color: #0cf;
     border: 2px solid #0cf;
-    cursor: pointer;
+    cursor: url('/src/assets/cursor/pointer.png'), pointer;
     margin-top: 5px;
     margin-bottom: 20px;
     border-radius: 5px;
