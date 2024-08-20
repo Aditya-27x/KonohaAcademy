@@ -6,6 +6,7 @@ import Notifications from './Components/Notifications';
 import HeaderText from './Components/HeaderText'
 import { Students } from './Components/students/Students';
 import Footer from './Components/Footer'
+import {Projects} from './Components/projects/Projects';
 
 const cards = [
     {
@@ -88,7 +89,34 @@ function App() {
         },
       ];
 
-
+        const projectCard = [
+            {
+                imgsrc:"/src/assets/projects-imgs/project-1.png",
+                title:"Personal Finance Management App",
+                description:"Create a web or mobile application that helps users manage their personal finances, track expenses, set budgets, and analyze spending patterns."
+            },
+            {
+                imgsrc:"/src/assets/projects-imgs/project-2.jpeg",
+                title:"Smart Home System",
+                description:"Build a system that allows users to control various home appliances (lights, thermostat, security cameras) through a centralized web or mobile app."
+            },
+        {
+            imgsrc:"/src/assets/projects-imgs/project-3.png",
+            title:"AI Chatbot for Customer Support",
+            description:"Develop an intelligent chatbot that can handle customer queries, provide recommendations, and escalate issues to human agents if needed."
+        },
+        {
+            imgsrc:"/src/assets/projects-imgs/project-4.png",
+            title:"Online Learning Platform",
+            description:"Create a platform where users can enroll in courses, watch video lectures, take quizzes, and track their progress."
+        },
+        {
+            imgsrc:"/src/assets/projects-imgs/project-5.jpeg",
+            title:"Real-Time Collaboration Tool",
+            description:"Build a tool that enables real-time collaboration on documents or projects, similar to Google Docs, allowing multiple users to edit and comment simultaneously."
+        },
+        
+    ]
     return (
         <>
 
@@ -102,12 +130,12 @@ function App() {
                             <li><a href="#" class='active'>Home</a></li>
                             <li><a href="#notification">Notification</a></li>
                             <li><a href="#student">Students</a></li>
-                            <li><a href="#">Projects</a></li>
+                            <li><a href="#project">Projects</a></li>
                         </ul>
 
                         {/* <ul className='btn'>
                             <button>LogIn</button>
-                            <button>Sign</button>
+                            <button>Sign</button>   <--- We used it later||
                         </ul> */}
                     </nav>
 
@@ -127,6 +155,10 @@ function App() {
                         {studentsCard.map((student, index) => (
                             <Students key={index} student={student} />
                         ))}
+                    </div>
+
+                    <div id="project">
+                    <Projects projectCard={projectCard} />
                     </div>
                 </main>
 

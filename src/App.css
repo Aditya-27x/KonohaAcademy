@@ -1,5 +1,6 @@
 body {
   cursor: url('./assets/cursor/cursor.png'), auto;
+  
 }
 
 /* Welcome Font */
@@ -66,7 +67,7 @@ body {
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
   z-index: 1;
   position: relative;
-  cursor: pointer;
+  cursor: url(./assets/cursor/pointer.png), pointer;
 }
 
 .card.active,
@@ -100,6 +101,10 @@ body {
   letter-spacing: 2px
 }
 
+/* Projects */
+#project{
+  background: linear-gradient(to bottom, #224d77, #4a7e90, #5facc2);
+}
 /* Footer */
 .footer {
   background-color: #203e5c;

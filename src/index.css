@@ -1,14 +1,16 @@
 @import url(./App.css);
 
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  cursor: url('./assets/cursor/cursor.png'), auto;
+ 
 }
 
 body {
-  
-  cursor: url('./assets/cursor/cursor\ .svg'), auto;
+
   font-family: "Passion One", sans-serif;
   background-color: #f0f4f8;
 
@@ -48,14 +50,17 @@ nav ul li {
   font-size: 26px;
 }
 
-nav ul li a, Link {
+nav ul li a,
+Link {
+  cursor: url('./assets/cursor/pointer.png'), pointer;
   text-decoration: none;
   text-shadow: 1px 1px 2px black;
   color: #f1f0eefc;
   font-weight: bold;
 }
 
-nav ul li a:hover, Link:hover{
+nav ul li a:hover,
+Link:hover {
   color: #fdfd25;
 }
 
@@ -227,7 +232,7 @@ nav ul li a.active {
   background-color: #21405f;
   border: 2px solid #fff;
   border-radius: 1rem;
-  cursor: pointer;
+  cursor: url('./assets/cursor/pointer.png'), pointer;
 
   outline: 1px solid transparent;
   outline-offset: -8px;
@@ -266,6 +271,75 @@ nav ul li a.active {
 }
 
 .attendance-btn {
+  cursor: url('./assets/cursor/pointer.png'), pointer;
   left: 104%;
   bottom: 0;
+}
+
+/* -------------------------------------------------------------------------------------------- */
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .welcome {
+    font-size: 3rem;
+    left: 2%;
+  }
+
+  .to {
+    font-size: 2rem;
+    left: 5%;
+  }
+
+  .konoha {
+    font-size: 3rem;
+    left: 1%;
+  }
+
+  nav ul li {
+    margin-left: 15px;
+    font-size: 1rem;
+  }
+
+  .btn button {
+    height: 24px;
+    width: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome {
+    font-size: 2rem;
+    left: 1%;
+  }
+
+  .to {
+    font-size: 1.5rem;
+    left: 3%;
+  }
+
+  .konoha {
+    font-size: 2rem;
+    left: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .btn {
+    position: static;
+    margin-top: 10px;
+  }
+
+  .btn button {
+    height: 20px;
+    width: 36px;
+  }
 }
