@@ -105,6 +105,44 @@ body {
 #project{
   background: linear-gradient(to bottom, #224d77, #4a7e90, #5facc2);
 }
+
+/* Scroll to Top  */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  cursor: url(./assets/cursor/pointer.png) ,pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.scroll-to-top:hover {
+  background-color: #0056b3;
+}
+
+/* BTN Animation  */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px); /* Optional: Move the button up slightly */
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
 /* Footer */
 .footer {
   background-color: #203e5c;
