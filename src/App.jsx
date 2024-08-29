@@ -9,6 +9,7 @@ import { Students } from './Components/students/Students';
 import Footer from './Components/Footer'
 import { Projects } from './Components/projects/Projects';
 
+// Notifications 
 const cards = [
     {
         title: "Assignment Due-date",
@@ -37,7 +38,7 @@ function App() {
             const homeSection = document.querySelector('nav ul li a.active');
             if (homeSection) {
                 const { top } = homeSection.getBoundingClientRect();
-                setShowScrollButton(top < 0); 
+                setShowScrollButton(top < 0);
             }
         };
 
@@ -53,6 +54,9 @@ function App() {
             behavior: 'smooth'
         });
     };
+
+// Student Cards --------------------------------------------------------------------------------------->
+
     const studentsCard = [
         {
             name: "Tony Mark",
@@ -104,6 +108,8 @@ function App() {
         },
     ];
 
+// Project Cards ------------------------------------------------------------------------------------------------------>
+
     const projectCard = [
         {
             imgsrc: "/src/assets/projects-imgs/project-1.png",
@@ -147,7 +153,7 @@ function App() {
 
                     <nav>
                         <ul>
-                            <li><a href="#" class='active'>Home</a></li>
+                            <li><a href="/" class='active'>Home</a></li>
                             <li><a href="#notification">Notification</a></li>
                             <li><a href="#student">Students</a></li>
                             <li><a href="#project">Projects</a></li>
@@ -155,7 +161,7 @@ function App() {
 
                         {/* <ul className='btn'>
                             <button>LogIn</button>
-                            <button>Sign</button>   <--- We used it later||
+                            <button>Sign</button>   <--- We used it later -------->
                         </ul> */}
                     </nav>
 

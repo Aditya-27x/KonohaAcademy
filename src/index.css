@@ -6,20 +6,23 @@
   padding: 0;
   box-sizing: border-box;
   cursor: url('./assets/cursor/cursor.png'), auto;
- 
+
 }
 
 body {
-
   font-family: "Passion One", sans-serif;
   background-color: #f0f4f8;
-
+  scrollbar-width: none;
 }
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
 
 /* HEADER */
 header {
   display: flex;
-  padding: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-image: url(/src/assets/homepage.png);
   background-size: cover;
@@ -224,8 +227,8 @@ nav ul li a.active {
   font-family: "Passion One", sans-serif;
   display: flex;
   position: absolute;
-  left: 18%;
-  bottom: 18%;
+  left: 18rem;
+  top: 34rem;
   padding: 10px 20px;
   font-size: 18px;
   color: #fff;
@@ -271,75 +274,129 @@ nav ul li a.active {
 }
 
 .attendance-btn {
-  cursor: url('./assets/cursor/pointer.png'), pointer;
-  left: 104%;
-  bottom: 0;
+  cursor: url(/src/assets/cursor/pointer.png), pointer;
+  left: 334px;
+  top: 0px;
+  position: absolute;
 }
 
-/* -------------------------------------------------------------------------------------------- */
+/*--------------------------------------- Media Queries ------------------------------*/
 
+/* SMALL DEVICES */
+@media only screen and (max-width: 450px) {
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .welcome {
-    font-size: 3rem;
-    left: 2%;
+  /* Header */
+
+  header {
+    height: 234px;
+    padding: 0;
   }
 
-  .to {
-    font-size: 2rem;
-    left: 5%;
+  header .logo img {
+    height: 21px;
+    width: 50px;
   }
 
-  .konoha {
-    font-size: 3rem;
-    left: 1%;
+  nav ul {
+    left: 43px;
   }
 
   nav ul li {
     margin-left: 15px;
-    font-size: 1rem;
+    margin-top: 2px;
+    font-size: 11px;
   }
 
-  .btn button {
-    height: 24px;
-    width: 40px;
-  }
-}
+  /* Hero Text */
 
-@media (max-width: 480px) {
   .welcome {
-    font-size: 2rem;
-    left: 1%;
+    top: 34px;
+    font-size: 2.5rem;
   }
 
   .to {
+    left: 159px;
+    top: 70px;
     font-size: 1.5rem;
-    left: 3%;
   }
 
   .konoha {
-    font-size: 2rem;
-    left: 0;
+    left: 3px;
+    top: 105px;
+    font-size: 25px;
   }
 
-  nav ul {
-    flex-direction: column;
-    align-items: center;
+  /* Attendance  */
+  .attendance {
+    left: 79px;
+    top: 144px;
+    padding: 5px;
+    font-size: 7px;
   }
 
-  nav ul li {
-    margin-left: 0;
-    margin-bottom: 10px;
+  .attendance-form {
+    width: 72px;
+    left: 35px;
+    top: 143px;
+    padding: 3px;
+    font-size: 3px;
+    height: 9px;
   }
 
-  .btn {
-    position: static;
-    margin-top: 10px;
+  .attendance-form input {
+    position: absolute;
+    left: 24px;
+    top: 1px;
+    height: 8px;
+    width: 42px;
+    margin: 0;
   }
 
-  .btn button {
-    height: 20px;
-    width: 36px;
+
+  .attendance-btn {
+    top: 0;
+    left: 80px;
   }
+
+  /* Notification Cards */
+
+  .card {
+    margin: 0 7px;
+    padding: 4px;
+    border-radius: 4px;
+  }
+
+  .card img {
+    border-radius: 4px 4px 0 0;
+  }
+
+  .card h3 {
+    font-size: 1rem;
+  }
+
+  .card p {
+    font-size: 10px;
+  }
+
+  .notification-bar {
+    padding: 20px 0;
+  }
+
+  /* Student Section */
+  #student {
+    padding: 0 10px;
+    padding-top: 10px;
+    padding-bottom: 40px;
+  }
+
 }
+
+@media only screen and (max-width:768px) {
+  /* header{
+    height: 49vh;
+  } */
+}
+
+/* -------------------------------------------------------------------------------------------- */
+/*                              DEVELOPED BY ADITYA THAKOR                                      */
+/* -------------------------------------------------------------------------------------------- */

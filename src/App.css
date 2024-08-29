@@ -3,6 +3,8 @@ body {
   
 }
 
+
+
 /* Welcome Font */
 @font-face {
   font-family: 'Lilita One';
@@ -52,10 +54,10 @@ body {
   letter-spacing: 2px
 }
 
-/* Cards */
+/* Notification Cards */
 
 .card {
-  min-width: 300px;
+  min-width: 100px;
   max-width: 400px;
   margin: 0 10px;
   padding: 20px;
@@ -184,3 +186,5 @@ body {
 .footer-content nav ul li a:hover {
   color: #ddd;
 }
+
+
