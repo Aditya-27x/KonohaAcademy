@@ -8,6 +8,7 @@ import HeaderText from './Components/HeaderText'
 import { Students } from './Components/students/Students';
 import Footer from './Components/Footer'
 import { Projects } from './Components/projects/Projects';
+import Loader from './Components/Loader';
 
 // Notifications 
 const cards = [
@@ -31,7 +32,21 @@ const cards = [
 ];
 
 function App() {
+    const [isLoading, setIsLoading] = useState(true);
     const [showScrollButton, setShowScrollButton] = useState(false);
+
+    // for loader
+    useEffect(() => {
+        // Listen for the page's load event
+        window.addEventListener('load', () => {
+            setIsLoading(false); // Hide the loader when the page is fully loaded
+        });
+
+        // Optional cleanup in case the component unmounts before load event
+        return () => {
+            window.removeEventListener('load', () => setIsLoading(false));
+        };
+    }, []);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -55,7 +70,7 @@ function App() {
         });
     };
 
-// Student Cards --------------------------------------------------------------------------------------->
+    // Student Cards --------------------------------------------------------------------------------------->
 
     const studentsCard = [
         {
@@ -108,7 +123,7 @@ function App() {
         },
     ];
 
-// Project Cards ------------------------------------------------------------------------------------------------------>
+    // Project Cards ------------------------------------------------------------------------------------------------------>
 
     const projectCard = [
         {
@@ -144,63 +159,65 @@ function App() {
 
     ]
     return (
-        <>
+        <div>
+            {isLoading ?
+                (<Loader />)
+                : (
+                    <div className="App">
 
-            <div className="App">
+                        <header>
+                            <div className="logo"> <img src="/src/assets/logo.png" alt="konoha logo" /> </div>
 
-                <header>
-                    <div className="logo"> <img src="/src/assets/logo.png" alt="konoha logo" /> </div>
+                            <nav>
+                                <ul>
+                                    <li><a href="/" class='active'>Home</a></li>
+                                    <li><a href="#notification">Notification</a></li>
+                                    <li><a href="#student">Students</a></li>
+                                    <li><a href="#project">Projects</a></li>
+                                </ul>
 
-                    <nav>
-                        <ul>
-                            <li><a href="/" class='active'>Home</a></li>
-                            <li><a href="#notification">Notification</a></li>
-                            <li><a href="#student">Students</a></li>
-                            <li><a href="#project">Projects</a></li>
-                        </ul>
-
-                        {/* <ul className='btn'>
+                                {/* <ul className='btn'>
                             <button>LogIn</button>
                             <button>Sign</button>   <--- We used it later -------->
                         </ul> */}
-                    </nav>
+                            </nav>
 
-                    <HeaderText />
+                            <HeaderText />
 
-                    <div id="hedbtn">
-                        <div><AttendanceForm /></div>
+                            <div id="hedbtn">
+                                <div><AttendanceForm /></div>
+                            </div>
+                        </header>
+                        <main>
+
+                            <div id='notification' className="notification">
+                                <Notifications cards={cards} interval={3000} />
+                            </div>
+
+                            <div id="student">
+                                {studentsCard.map((student, index) => (
+                                    <Students key={index} student={student} />
+                                ))}
+                            </div>
+
+                            <div id="project">
+                                <Projects projectCard={projectCard} />
+                            </div>
+                        </main>
+
+                        {showScrollButton && (
+                            <button className="scroll-to-top" onClick={scrollToTop}>
+                                ↑
+                            </button>
+                        )}
+
+                        <footer>
+                            <Footer />
+                        </footer>
+
                     </div>
-                </header>
-                <main>
-
-                    <div id='notification' className="notification">
-                        <Notifications cards={cards} interval={3000} />
-                    </div>
-
-                    <div id="student">
-                        {studentsCard.map((student, index) => (
-                            <Students key={index} student={student} />
-                        ))}
-                    </div>
-
-                    <div id="project">
-                        <Projects projectCard={projectCard} />
-                    </div>
-                </main>
-
-                {showScrollButton && (
-                    <button className="scroll-to-top" onClick={scrollToTop}>
-                        ↑
-                    </button>
                 )}
-
-                <footer>
-                    <Footer />
-                </footer>
-
-            </div>
-
-        </>
+        </div>
     )
 }
 

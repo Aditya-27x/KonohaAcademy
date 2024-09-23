@@ -30,9 +30,9 @@ function AttendanceForm() {
           <label>
             Roll Number:
             <input
-              type="text"
+              type="number"
               value={rollNumber}
-              onChange={handleInputChange}  
+              onChange={handleInputChange}
               required
             />
           </label>
@@ -42,5 +42,5 @@ function AttendanceForm() {
     </div>
   );
 }
-                                                     //We'll back soon
+
 export default AttendanceForm;

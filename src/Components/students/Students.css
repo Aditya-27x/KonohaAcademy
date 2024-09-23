@@ -184,7 +184,22 @@
 /*------------------------------------- Media Querise ----------------------------------------------------------------*/
 /**********************************************************************************************************************/
 
-@media only screen and (max-width:450px) {
+@media only screen and (max-width:1252px) {
+  .studentCard {
+    height: 421px;
+    width: 312px;
+  }
+
+  .StudentApp {
+    min-height: 80vh;
+  }
+
+  .social-media {
+    top: 186px;
+  }
+}
+
+@media only screen and (max-width:920px) {
 
   /* Student Cards */
 
@@ -196,43 +211,47 @@
   }
 
   .studentCard {
-    height: 109px;
-    width: 77px;
+    height: 251px;
+    width: 180px;
   }
 
   .studentCard:hover .image-section {
     top: 0px;
-    height: 38px;
-    width: 35px;
-    border-radius: 32%;
+    height: 131px;
+    width: 125px;
+    border-radius: 50%;
+  }
+
+  .studentImg {
+    width: 112px;
   }
 
   .studentinfo {
-    top: 22%;
+    top: 30%;
   }
 
   .studentinfo span:nth-child(1) {
     letter-spacing: 1px;
-    font-size: 13px;
+    font-size: 35px;
     margin: 0 2px;
   }
 
   .studentinfo span:nth-child(2) {
     letter-spacing: 1px;
-    font-size: 5px;
+    font-size: 16px;
     margin-bottom: 3px;
   }
 
   .studentinfo p {
-    font-size: 5px;
+    font-size: 10px;
     margin: 2px;
   }
 
   .RMbtn {
-    height: 7px;
-    width: 18px;
-    font-size: 2px;
-    margin-top: 1px;
+    height: 24px;
+    width: 53px;
+    font-size: 9px;
+    margin-top: 15px;
     margin-bottom: 3px;
     border: 1px solid;
   }
@@ -241,15 +260,63 @@
   .social-media {
     margin: 1px;
     position: absolute;
-    top: 70px;
+    top: 149px;
   }
 
 
   .social-media img {
-    width: 10px;
-    height: 10px;
+    width: 20px;
+    height: 20px;
     margin-left: 6px;
     border: 1px solid #ff2222;
   }
 
+}
+
+@media only screen and (max-width:450px) {
+  .studentCard {
+    height: 156px;
+    width: 117px;
+  }
+
+  .studentCard:hover .image-section {
+    height: 68px;
+    width: 66px;
+  }
+
+  .studentImg {
+    width: 59px;
+  }
+
+  .studentinfo {
+    top: 25%;
+  }
+
+  .studentinfo span:nth-child(1) {
+    font-size: 20px;
+  }
+
+  .studentinfo span:nth-child(2) {
+    font-size: 10px;
+  }
+
+  .studentinfo p {
+    font-size: 7px;
+  }
+
+  .RMbtn {
+    height: 18px;
+    width: 40px;
+    font-size: 5px;
+    margin-top: 10px;
+  }
+
+  .social-media {
+    top: 96px;
+  }
+
+  .social-media img {
+    width: 15px;
+    height: 15px;
+  }
 }

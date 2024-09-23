@@ -225,12 +225,16 @@ nav ul li a.active {
 
 .attendance {
   font-family: "Passion One", sans-serif;
+  height: 47px;
+  width: 119px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   left: 18rem;
   top: 34rem;
-  padding: 10px 20px;
-  font-size: 18px;
+  /* padding: 10px 20px; */
+  font-size: 21px;
   color: #fff;
   background-color: #21405f;
   border: 2px solid #fff;
@@ -263,24 +267,152 @@ nav ul li a.active {
 }
 
 .attendance-form {
-  left: 7%;
+  left: 6%;
+  top: 70%;
+  width: 350px;
+  height: 68px;
 }
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* I add this for remove up-dwn arraow in  input field */
 
 .attendance-form input {
   border-radius: 6px;
   border: 1px solid white;
-  left: 1;
-  margin: 5px;
+  margin-left: 27px;
+  height: 43px;
+  text-align: center;
 }
 
 .attendance-btn {
   cursor: url(/src/assets/cursor/pointer.png), pointer;
-  left: 334px;
-  top: 0px;
+  left: 120px;
+  top: 71px;
   position: absolute;
 }
 
 /*--------------------------------------- Media Queries ------------------------------*/
+
+@media only screen and (max-width:1252px) {
+
+  nav ul {
+    left: 17%;
+  }
+
+  .welcome {
+    top: 12%;
+    font-size: 6rem;
+  }
+
+  .to {
+    left: 38%;
+    top: 25%;
+  }
+
+  .konoha {
+    bottom: 46%;
+    font-size: 75PX;
+  }
+
+  .attendance {
+    left: 14rem;
+    top: 28rem;
+  }
+
+  .attendance-form {
+    left: 6rem;
+  }
+
+  .attendance-btn {
+    top: 0rem;
+    left: 20rem;
+  }
+
+
+
+}
+
+/* MID DEVICES */
+
+@media screen and (max-width:920px) {
+
+  /* Header */
+
+  header {
+    height: 318px;
+    padding: 0;
+  }
+
+  header .logo img {
+    height: 31px;
+    width: 65px;
+  }
+
+  nav ul {
+    left: 139px;
+  }
+
+  nav ul li {
+    margin-left: 21px;
+    margin-top: 4px;
+    font-size: 19px;
+  }
+
+  /* Hero Text */
+
+  .welcome {
+    top: 50px;
+    font-size: 5.5rem;
+  }
+
+  .to {
+    left: 362px;
+    top: 122px;
+    font-size: 2rem;
+  }
+
+  .konoha {
+    left: 3px;
+    top: 164px;
+    font-size: 52px;
+  }
+
+  /* Attendance  */
+  .attendance {
+    left: 114px;
+    top: 227px;
+  }
+
+  .attendance-form {
+    width: 161px;
+    height: 56px;
+  }
+
+  .attendance-form label {
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .attendance-form input {
+    height: 28px;
+    width: 86px;
+    margin: 4px;
+  }
+
+
+  .attendance-btn {
+    top: 59px;
+    left: 43px;
+    height: 26px;
+    width: 72px;
+    font-size: 14px;
+  }
+}
 
 /* SMALL DEVICES */
 @media only screen and (max-width: 450px) {
@@ -288,74 +420,72 @@ nav ul li a.active {
   /* Header */
 
   header {
-    height: 234px;
-    padding: 0;
+    height: 275px;
   }
 
   header .logo img {
-    height: 21px;
-    width: 50px;
+    height: 24px;
+    width: 56px;
   }
 
   nav ul {
-    left: 43px;
+    left: 67px;
   }
 
   nav ul li {
-    margin-left: 15px;
-    margin-top: 2px;
-    font-size: 11px;
+    margin-left: 14px;
+    margin-top: 4px;
+    font-size: 12px;
   }
 
   /* Hero Text */
 
   .welcome {
-    top: 34px;
-    font-size: 2.5rem;
+    top: 38px;
+    font-size: 3rem;
   }
 
   .to {
-    left: 159px;
-    top: 70px;
+    left: 194px;
+    top: 80px;
     font-size: 1.5rem;
   }
 
   .konoha {
     left: 3px;
-    top: 105px;
-    font-size: 25px;
+    top: 118px;
+    font-size: 30px;
   }
 
   /* Attendance  */
   .attendance {
-    left: 79px;
-    top: 144px;
-    padding: 5px;
-    font-size: 7px;
+    height: 25px;
+    width: 58px;
+    font-size: 11px;
+    left: 78px;
+    top: 171px;
   }
 
   .attendance-form {
-    width: 72px;
-    left: 35px;
-    top: 143px;
-    padding: 3px;
-    font-size: 3px;
-    height: 9px;
+    width: 166px;
+    height: 63px;
+  }
+
+  .attendance-form label {
+    font-size: 11px;
+    text-align: center;
   }
 
   .attendance-form input {
-    position: absolute;
-    left: 24px;
-    top: 1px;
-    height: 8px;
-    width: 42px;
-    margin: 0;
+    height: 28px;
+    width: 86px;
+    margin: 4px;
   }
 
 
   .attendance-btn {
-    top: 0;
-    left: 80px;
+    top: 5px;
+    left: 171px;
   }
 
   /* Notification Cards */
@@ -391,11 +521,7 @@ nav ul li a.active {
 
 }
 
-@media only screen and (max-width:768px) {
-  /* header{
-    height: 49vh;
-  } */
-}
+
 
 /* -------------------------------------------------------------------------------------------- */
 /*                              DEVELOPED BY ADITYA THAKOR                                      */

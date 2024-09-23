@@ -1,0 +1,30 @@
+/* Background gradient */
+.loader-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #224d77, #4a7e90, #5facc2);
+}
+
+/* Loader spinner */
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 8px solid rgba(255, 223, 0, 0.3);
+    /* Yellow shades */
+    border-top: 8px solid rgba(255, 223, 0, 1);
+    /* Solid yellow for top */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

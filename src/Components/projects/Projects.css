@@ -191,18 +191,21 @@ img {
         height: 125px;
         border-radius: 0.5rem;
     }
-    .ProjectCard{
+
+    .ProjectCard {
         margin-bottom: 40px;
     }
-    
-    .Title{
+
+    .Title {
         font-size: 13px;
     }
-    .Description{
+
+    .Description {
         font-size: 9px;
         word-wrap: break-word;
     }
-    .Btn{
+
+    .Btn {
         font-size: 11px;
         position: absolute;
         bottom: 0;
@@ -211,23 +214,46 @@ img {
 
 /* For medium devices */
 @media screen and (min-width: 768px) {
+    .ProjectContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding-top: 89px;
+    }
+
     .ProjectCard {
-        /* grid-template-columns: repeat(2, 1fr); */
-        column-gap: 1.5rem;
+        height: 16rem;
+        width: 18rem;
+    }
+
+    .ProjectImg {
+        width: 272px;
+        height: 182px;
+    }
+
+    .ProjectData {
+        width: 215px;
+        padding: 1.5rem 1rem;
+        bottom: -4rem;
+        left: 26px;
+        right: 105px;
     }
 }
+
 
 /* For large devices */
 @media screen and (min-width:1120px) {
     .ProjectContainer {
         height: 100vh;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
     }
 
-    /* .ProjectCard {
-        grid-template-columns: repeat(3, 1fr);
-    } */
+    .ProjectCard {
+        height: 18rem;
+        width: 23rem;
+    }
 
     .ProjectImg {
         width: 423px;
@@ -238,5 +264,10 @@ img {
     .ProjectData {
         width: 316px;
         padding-inline: 2.5rem;
+    }
+
+    .ProjectCard {
+        height: 18rem;
+        width: 24rem;
     }
 }
